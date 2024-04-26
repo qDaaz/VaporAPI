@@ -1,0 +1,57 @@
+package dev.astro.net.timer.type;
+
+import dev.astro.net.timer.PlayerTimer;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.plugin.IllegalPluginAccessException;
+
+import java.util.UUID;
+
+public class SpawnHandler extends PlayerTimer implements Listener {
+
+    public SpawnHandler(String name, long defaultCooldown) {
+        super(name, defaultCooldown);
+    }
+
+    public Location getDestination(Player player) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    public ChatColor getScoreboardPrefix() {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    public int getNearbyEnemies(Player player, int distance) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    public boolean teleport(Player player, Location location, long millis, String warmupMessage, PlayerTeleportEvent.TeleportCause cause) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    public void cancelTeleport(Player player, String reason) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onPlayerMove(PlayerMoveEvent event) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onPlayerDamage(EntityDamageEvent event) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+
+    @Override
+    public void onExpire(UUID userUUID) {
+        throw new IllegalPluginAccessException("VaporAPI not found");
+    }
+}
